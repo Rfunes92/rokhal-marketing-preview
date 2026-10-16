@@ -273,6 +273,18 @@ footer :focus-visible{outline-color:var(--amber)}
 .copy{border-top:1px solid rgba(255,255,255,.14);margin-top:2rem;padding-top:1.25rem;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;font-size:.875rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 
+.reviews{padding:64px 0;background:var(--g50)}
+.rv-note{color:var(--g600);font-size:1rem;margin:.25rem 0 1.75rem}
+.rv-note b{color:var(--navy)}
+.rv-grid{display:grid;gap:1.25rem}
+@media (min-width:760px){.rv-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1040px){.rv-grid{grid-template-columns:repeat(3,1fr)}}
+.rv{margin:0;background:#fff;border:1px solid var(--g100);border-top:4px solid var(--amber);border-radius:var(--r);padding:1.4rem;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.rv .stars{display:flex;gap:2px;margin-bottom:.6rem}
+.rv blockquote{margin:0 0 1rem;flex:1}
+.rv blockquote p{margin:0;color:var(--ink);font-size:1rem;line-height:1.6}
+.rv figcaption{font-weight:700;color:var(--navy);font-size:1rem}
+
 .legal{padding:48px 0 72px}
 .legal .wrap{max-width:820px}
 .legal h1{font-size:clamp(2.1rem,6vw,3rem)}
@@ -296,7 +308,7 @@ footer :focus-visible{outline-color:var(--amber)}
       <picture><source srcset="assets/rokhal-logo-160.webp" type="image/webp"><img src="assets/rokhal-logo-web.jpg" alt="Rokhal Marketing" class="logo-img" width="98" height="80" fetchpriority="high"></picture>
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="index.html#work">Our work</a><a href="index.html#services">Services</a><a href="index.html#founding">Founding clients</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a>
+      <a href="index.html#work">Our work</a><a href="index.html#services">Services</a><a href="index.html#reviews">Reviews</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a>
     </nav>
     <a class="btn btn-amber hdr-cta" href="index.html#contact">Get a free demo</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu">
@@ -304,7 +316,7 @@ footer :focus-visible{outline-color:var(--amber)}
     </button>
   </div>
   <nav class="mobile-nav" id="mnav" aria-label="Mobile">
-    <a href="index.html#work">Our work</a><a href="index.html#services">Services</a><a href="index.html#founding">Founding clients</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a>
+    <a href="index.html#work">Our work</a><a href="index.html#services">Services</a><a href="index.html#reviews">Reviews</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a>
     <a class="btn btn-amber" href="index.html#contact">Get a free demo</a>
   </nav>
 </header>
@@ -362,7 +374,7 @@ footer :focus-visible{outline-color:var(--amber)}
         <a class="brand" href="index.html#top" aria-label="Rokhal Marketing, home"><picture><source srcset="assets/rokhal-logo-160.webp" type="image/webp"><img src="assets/rokhal-logo-web.jpg" alt="Rokhal Marketing" class="logo-img" width="103" height="84" loading="lazy" decoding="async"></picture></a>
         <p style="margin-top:1rem;max-width:40ch">Websites and automation for electricians, HVAC and plumbing shops in Bucks County, Bensalem and Morrisville, PA.</p>
       </div>
-      <nav aria-label="Footer"><p class="f-h">Explore</p><a href="index.html#work">Our work</a><a href="index.html#services">Services</a><a href="index.html#founding">Founding clients</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a></nav>
+      <nav aria-label="Footer"><p class="f-h">Explore</p><a href="index.html#work">Our work</a><a href="index.html#services">Services</a><a href="index.html#reviews">Reviews</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a></nav>
       <nav aria-label="Legal"><p class="f-h">Legal</p><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="sms-terms.html">SMS Terms</a></nav>
       <div><p class="f-h">Rokhal Marketing LLC</p><p>Serving Bucks County, Bensalem and Morrisville, PA</p><p><span class="ph">[Phone and email: to be added]</span></p></div>
     </div>
