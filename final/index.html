@@ -195,9 +195,10 @@ section{padding:64px 0}
 .subhead{font:700 clamp(1.5rem,5.5vw,2rem)/1.15 var(--disp);color:#fff;margin:0 0 .6rem;letter-spacing:.01em}
 .hero .lead{color:#C9D4E4;margin-bottom:0}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.6rem 0 .9rem}
-.btn-call{background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}
+.btn-call{font-size:1rem;background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}
 .btn-call[aria-disabled="true"]{cursor:not-allowed}
 .btn-call .ph{background:#1B3A66;color:#FFE3A8;border-color:var(--amber)}
+@media (max-width:519px){.hero-ctas .btn{width:100%}}
 .hero-note{font-size:.95rem;color:#C9D4E4;margin:0}
 .hero-note b{color:#fff}
 .hero .ph{background:#1B3A66;color:#FFE3A8;border-color:var(--amber)}
@@ -205,7 +206,7 @@ section{padding:64px 0}
 /* demo phone */
 .demo{display:flex;flex-direction:column;align-items:center;gap:1rem}
 .phone{margin:0;width:min(330px,100%);background:#0A1424;border-radius:40px;padding:10px;box-shadow:0 30px 60px rgba(0,0,0,.45),0 0 0 2px #3A4656;position:relative}
-.phone-screen{background:#F1F3F6;border-radius:31px;overflow:hidden}
+.phone-screen{color:var(--ink);background:#F1F3F6;border-radius:31px;overflow:hidden}
 .ph-head{display:flex;align-items:center;gap:.6rem;padding:1.4rem .9rem .7rem;background:#fff;border-bottom:1px solid var(--g100)}
 .ph-head strong{display:block;color:var(--navy);font-size:.95rem;line-height:1.2}
 .ph-head small{color:var(--g600);font-size:.8rem}
@@ -234,6 +235,8 @@ section{padding:64px 0}
 .replay:focus-visible,.hero :focus-visible{outline-color:var(--amber)}
 /* demo animation: only when JS adds .run and the user has not asked for reduced motion */
 @media (prefers-reduced-motion:no-preference){
+  .demo.wait .seq{opacity:0}
+  .demo.wait .flow li{background:#2A3A52;color:#9FB0C6}
   .demo.run .seq{animation:pop .4s ease-out both;animation-delay:var(--d,0s)}
   .demo.run .typing{display:flex;gap:4px;align-items:center;background:var(--navy);border-radius:14px;padding:.6rem .8rem;margin-left:auto;width:max-content;animation:tp var(--t,1.2s) linear both;animation-delay:var(--d,0s);overflow:hidden}
   .demo.run .typing i{width:6px;height:6px;border-radius:50%;background:#fff;opacity:.5;animation:dot .9s infinite}
@@ -261,7 +264,8 @@ section{padding:64px 0}
 .tag{display:inline-block;font:800 .9rem/1 var(--disp);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.45rem}
 .p-prob .tag{color:#9E2A2A}
 .p-fix .tag{color:var(--amber-t)}
-.pain h3{margin:0 0 .3rem;font-size:1.55rem}
+.pain h3{margin:0 0 .3rem;font-size:1.45rem}
+@media (max-width:759px){.pain>div{padding:1rem 1.1rem}}
 .pain p{margin:0;color:var(--g600)}
 @media (min-width:760px){.pain{grid-template-columns:1fr 1.25fr}.p-fix{border-top:0;border-left:4px solid var(--amber)}}
 .pains-foot{margin:1.5rem 0 0;color:var(--g600);max-width:70ch}
@@ -320,7 +324,7 @@ section{padding:64px 0}
 .founder .ph{background:#1B3A66;color:#FFE3A8;border-color:var(--amber)}
 .fd-grid{display:grid;gap:2rem;align-items:center}
 @media (min-width:880px){.fd-grid{grid-template-columns:.6fr 1.4fr;gap:3rem}}
-.owner-photo{aspect-ratio:4/5;max-width:300px;border:2px dashed var(--amber);border-radius:12px;background:#2A323C;display:grid;place-items:center;text-align:center;color:#FFE3A8;font-weight:700;padding:1rem}
+.owner-photo{aspect-ratio:4/5;width:min(300px,62%);border:2px dashed var(--amber);border-radius:12px;background:#2A323C;display:grid;place-items:center;text-align:center;color:#FFE3A8;font-weight:700;padding:1rem}
 .owner-photo svg{display:block;width:56px;height:56px;margin:0 auto .5rem}
 .founder :focus-visible{outline-color:var(--amber)}
 /* pricing */
@@ -416,7 +420,7 @@ footer :focus-visible{outline-color:var(--amber)}
       <div class="hero-ctas">
         <a class="btn btn-amber btn-lg" href="#contact">Get a free demo <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <!-- PLACEHOLDER [PHONE]: when Ronnie gives the number, add href="tel:+1XXXXXXXXXX", remove aria-disabled, and replace the placeholder text with the number -->
-        <a class="btn btn-call btn-lg" aria-disabled="true"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5c0 8.3 6.7 15 15 15l2-3.5-4-2-2 2c-2.5-1-4.5-3-5.5-5.5l2-2-2-4L5 3z" fill="currentColor"/></svg>Call <span class="ph">[phone: to be added by Ronnie]</span></a>
+        <a class="btn btn-call btn-lg" aria-disabled="true"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5c0 8.3 6.7 15 15 15l2-3.5-4-2-2 2c-2.5-1-4.5-3-5.5-5.5l2-2-2-4L5 3z" fill="currentColor"/></svg>Call <span class="ph">[phone: to be added]</span></a>
       </div>
       <p class="hero-note"><b>Free 15-minute missed-call audit, no pitch.</b> <span class="ph">[audit wording: to be confirmed by Ronnie]</span></p>
     </div>
@@ -676,8 +680,10 @@ footer :focus-visible{outline-color:var(--amber)}
   var demo=d.getElementById('demo'),rp=demo&&demo.querySelector('.replay');
   var mq=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)');
   if(demo&&!(mq&&mq.matches)){
-    var play=function(){demo.classList.remove('run');void demo.offsetWidth;demo.classList.add('run');};
-    play();
+    var play=function(){demo.classList.remove('run','wait');void demo.offsetWidth;demo.classList.add('run');};
+    // start on load when the demo is on screen (desktop); on small screens start once it scrolls into view
+    if(demo.getBoundingClientRect().top<window.innerHeight*.8||!('IntersectionObserver' in window)){play();}
+    else{demo.classList.add('wait');var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){play();io.disconnect();}},{threshold:.35});io.observe(demo);}
     rp.hidden=false;
     rp.addEventListener('click',play);
   }
